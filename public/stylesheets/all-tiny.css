@@ -1,0 +1,50 @@
+.docbox
+    {
+        overflow: auto;
+        z-index: -100;
+    }
+    .docbox .nav
+    {
+        float: none;
+
+        width: 100%;
+        max-width: none;
+        height: auto;
+
+    }
+    .markdown
+    {
+        height: auto;
+    }
+    .nav-btn
+    {
+        display: inline-block;
+    }
+    .nav-btn-bottom
+    {
+        display: none;
+
+        margin-right: 3%;
+    }
+    .nav-content .navlist
+    {
+        display: none;
+    }
+   
+    .content
+    {
+        overflow: visible;
+    }
+    .nav .nav-btn .nav-btn-bottom
+    {
+        display: none;
+    }
+    .progress-bar
+    {
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+    }
+    .progress-remain{
+    	background-color: #fafafa;
+    }

@@ -1,0 +1,152 @@
+.docbox .nav
+{
+    position: relative;
+
+    float: left;
+    overflow: auto;
+
+    min-width: 15%;
+    max-width: 20%;
+    height: 100%;
+
+    background-color: #fafafa;
+}
+.nav-btn
+{
+    display: none;
+    float: right;
+
+    margin-top: 2px;
+    margin-top: -8px;
+    padding: 9px 10px;
+
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.nav-btn:active
+{
+    background-color: #ddd;
+}
+.nav-btn-bottom:active
+{
+    background-color: #ddd;
+}
+.nav-btn:link
+{
+    background-color: #ddd;
+}
+
+.nav-btn .nav-btn-bottom
+{
+    display: none;
+}
+
+.nav-btn .btn-bar
+{
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: #555;
+}
+.btn-bar + .btn-bar
+{
+    margin-top: 4px;
+}
+.docbox .nav-header  h1
+{
+    font-size: 21px;
+    line-height: 1.1;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0 3%;
+}
+.docbox .navlist
+{
+    font-size: 13px;
+
+    padding-left: 15px;
+
+    color: #4183c4;
+}
+.docbox .navlist p,
+.docbox .navlist li
+{
+    margin: 18px 15px;
+    padding-left: 18px;
+
+    cursor: pointer;
+}
+.docbox .navlist p.right,
+.docbox .navlist li.right
+{
+    background: url(./images/rowright.png);
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+}
+.docbox .navlist p.down,
+.docbox .navlist li.down
+{
+    background: url(./images/rowdown.png);
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+}
+.docbox .navlist ul
+{
+    display: none;
+
+    margin-left: 30px;
+}
+.docbox .navlist li
+{
+    background: url(./images/book.png);
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+}
+.docbox .navlist p.active,
+.docbox .navlist li.active,
+.docbox .nav-header h1.active
+{
+    color: #000;
+}
+/*自适应布局*/
+@media screen and (max-width: 768px)
+{
+    .docbox
+    {
+        overflow: auto;
+        z-index: -100;
+    }
+    .docbox .nav
+    {
+        float: none;
+
+        width: 100%;
+        max-width: none;
+        height: auto;
+
+    }
+    .nav-btn
+    {
+        display: inline-block;
+    }
+    .nav-btn-bottom
+    {
+        display: none;
+
+        margin-right: 3%;
+    }
+    .nav-content .navlist
+    {
+        display: none;
+    }
+    .nav .nav-btn .nav-btn-bottom
+    {
+        display: none;
+    }
+}
