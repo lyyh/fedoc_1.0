@@ -1,5 +1,3 @@
-
-
 //是否是小页面(false:不是)
 var isSmallSceen = false;
 

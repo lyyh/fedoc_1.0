@@ -4,13 +4,15 @@ import PubSub from 'pubsub-js';
 
 
 let ProgressBar = React.createClass({
+  //初始状态
 	getInitialState() {
     	return {
       		remain: '100%'
     	};
   	},
 	componentDidMount() {
-    	this.pubsub_token = PubSub.subscribe('load', function (topic, product) {
+    	//发布事件
+      this.pubsub_token = PubSub.subscribe('load', function (topic, product) {
     		
     		this.setState({
 					remain: '100%'
@@ -18,7 +20,8 @@ let ProgressBar = React.createClass({
 
     		$('.progress-bar').show()
 
-      		this.timer = setInterval(function(){
+      //每0.1秒改变一次
+      this.timer = setInterval(function(){
 
 			if(parseInt(this.state.remain) < 10){
 				clearInterval(this.timer)
@@ -34,11 +37,13 @@ let ProgressBar = React.createClass({
    	 	
       }.bind(this))
 
+      //订阅事件
    	 	this.pubsub_token = PubSub.subscribe('complete',function(topic,product){
    	 		this.setState({
    	 			remain: 0
    	 		})
 
+        //防止文档加载过快无进度条效果
    	 		setTimeout(function(){
    	 			clearInterval(this.timer)
    	 			this.setState({

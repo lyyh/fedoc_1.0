@@ -1,8 +1,6 @@
 import urlConfig from '../refs/urlConfig';
 import scrConfig from '../refs/screenConfig';
-import PubSub from 'pubsub-js'
-// import $ from 'jquery';
-// import pjax from 'coffce-pjax';
+import PubSub from 'pubsub-js';
 
 export function getNavList(obj){
 	$.get(urlConfig.navListUrl,function(result){
